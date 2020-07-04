@@ -9,4 +9,5 @@ The first collumn of these files has to be named “Time” and contain dates (d
 "Chapter 4 Plots.R" creates the plots found in Chapter 4 of the thesis.\
 "Chapter 5 Plots.R" creates the plots found in Chpater 5 of the thesis.\
 "TimeZones.R" creates the Time Zones structure.\
-"L1-L2.R" converts LoadShifting or TimeZones structures back into the L1 and L2 type structures
+"LoadShifting.R" performs load shifting on the TimeZones structure.\
+"L1-L2.R" converts LoadShifting or TimeZones structures back into the L1 and L2 type structures.
