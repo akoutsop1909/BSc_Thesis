@@ -1,4 +1,4 @@
-# Converts LoadShifting or TimeZones structures back into L1 and L2 type structures
+# Converts LoadShifting or TimeZones structures back into the L1 and L2 type structures
 
 # CONTAINS FUNCTION AT THE END OF THE FILE
 
