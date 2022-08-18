@@ -1,4 +1,4 @@
-# BSc_Thesis_Scripts
+# BSc Thesis Scripts
 In order for the scripts to work, three .csv files are required;\
 House.csv: a file containing the household power demand (in watt).\
 PEV_L1.csv: a file containing the power demand of PEV charging using Level 1 charging (in watt).\
