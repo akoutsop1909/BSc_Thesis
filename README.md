@@ -1,4 +1,6 @@
 # BSc Thesis Scripts
+Το εν λόγω repository περιλαμβάνει όλα τα απαραίτητα csv αρχεία και script της πτυχιακής μου εργασίας, άμεσα εκτελέσημα σε περιβάλλον R. Για την ομαλή λειτουργία μερικών script, συνηστάται ο ορισμός της περιοχής (region) του συστήματος σε Αγγλικά
+
 In order for the scripts to work, three .csv files are required;\
 House.csv: a file containing the household power demand (in watt).\
 PEV_L1.csv: a file containing the power demand of PEV charging using Level 1 charging (in watt).\
