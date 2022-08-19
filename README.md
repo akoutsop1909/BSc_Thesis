@@ -1,20 +1,20 @@
 # BSc Thesis Scripts
-Το συγκεκριμένο repository περιλαμβάνει όλα τα απαραίτητα csv αρχεία και script της πτυχιακής μου εργασίας, άμεσα εκτελέσιμα σε περιβάλλον R. Για την ομαλή λειτουργία μερικών script, συνιστάται ο ορισμός της περιοχής (region) του συστήματος σε Ηνωμένες Πολιτείες Αμερικής, ώστε οι ημερομηνίες που εκχωρεί η R στα κελιά των data frames να είναι στα Αγγλικά. Εναλλακτικά, στο "about" του repository, δίνεται όλα τα γραφήματα που προκύπτουν από την εκτέλεση του κώδικα με μια συνοδευτική περιγραφή. 
+Το συγκεκριμένο repository περιλαμβάνει όλα τα απαραίτητα αρχεία csv και script της πτυχιακής μου εργασίας, άμεσα εκτελέσιμα σε περιβάλλον R. Για την ομαλή λειτουργία μερικών script, συνιστάται ο ορισμός της περιοχής (region) του συστήματος του υπολογιστή σε Ηνωμένες Πολιτείες Αμερικής, ώστε η R να εκχωρεί τις ημερομηνίες στα Αγγλικά (όχι στα Ελληνικά), αλλίως κάποια γραφήματα εμφανίζονται λανθασμένα. Εναλλακτικά, ο σύνδεσμος στο "about" του repository οδηγεί σε ένα google colab notebook (με συνδέσμους προς τα υπόλοιπα), όπου ο κώδικας έχει ήδη εκτελεστεί με όλα τα γραφήματα που προκύπτουν, καθώς και συνοδευτική περιγραφή στην αρχή κάθε notebook. 
 
-Συνοπτικά, το θέμα της πτυχιακής αφορούσε τη διερεύνηση των απαιτήσεων ενέργειας ηλεκτρικών οχημάτων (PEV) που φορτίζουν σε "έξυπνο" δίκτυο ενέργειας (smart grid) από δεδομένα σε μορφή csv. Στη συνέχεια εφαρμόστηκε η στρατηγική μετατόπησης φορτίων (load shifting), ώστε οι απαιτήσεις ενέργειας του smart grid να μεταφερθούν από τις ώρες αιχμής σε ώρες μη-αιχμής στη διάκρεια της ημέρας. Για τις ανάγκες της εργασίας χρησιμοποιήθηκαν εργαλεία αναλυτικής των δεδομένων (data analytics) και περιγραφικής στατιστικής (descriptive statistics) για τη διαχείριση των δεδομένων και την οπτικοποίηση των αποτελεσμάτων.
+Συνοπτικά, το θέμα της πτυχιακής αφορούσε τη διερεύνηση των απαιτήσεων ενέργειας ηλεκτρικών οχημάτων (PEV) που φορτίζουν σε ένα "έξυπνο" δίκτυο ενέργειας (smart grid) από δεδομένα μορφής csv. Στη συνέχεια εφαρμόστηκε η στρατηγική μετατόπησης φορτίων (load shifting), ώστε οι απαιτήσεις ενέργειας του smart grid να μεταφερθούν από τις ώρες αιχμής σε ώρες μη-αιχμής στη διάκρεια της ημέρας. Για τις ανάγκες της εργασίας χρησιμοποιήθηκαν εργαλεία αναλυτικής των δεδομένων (data analytics) και περιγραφικής στατιστικής (descriptive statistics) για τη διαχείριση των δεδομένων και την οπτικοποίηση των αποτελεσμάτων.
 
 ## Τα δεδομένα
-House.csv: a file containing the household power demand (in watt).\
-PEV_L1.csv: a file containing the power demand of PEV charging using Level 1 charging (in watt).\
-PEV_L2.csv: a file containing the power demand of PEV charging using Level 2 charging (in watt).\
-TimeZones.csv:
-LoadShifting.csv
+* ```House.csv```: περιέχει τις απαιτήσεις ισχύος των οικιών (σε watt).
+* ```PEV_L1.csv```: περιέχει τις απαιτήσεις ισχύος των PEV που φορτίζουν με τον τύπο φόρτησης L1 (σε watt).
+* ```PEV_L2.csv```: περιέχει τις απαιτήσεις ισχύος των PEV που φορτίζουν με τον τύπο φόρτησης L2 (σε watt).
+* ```TimeZones_old.csv```: καινούρια δομή με τις φορτήσεις PEV κατηγοριοποιημένες ανά χρονική ζώνη (time zone).
+* ```TimeZones.csv```: περιέχει μόνο τις φορτήσεις ανα χρονική ζώνη μιας εργάσιμης εβδομάδας του Ιανουαρίου. 
 
 ## Τα αρχεία R που δημιουργήθηκαν
-"Chapter 2 Plots.R" creates the plots found in Chapter 2 of the thesis.\
-"Chapter 4 Plots.R" creates the plots found in Chapter 4 of the thesis.\
-"Chapter 5 Plots.R" creates the plots found in Chpater 5 of the thesis.\
-"Chapter 6 Plots.R" creates the plots found in Chpater 6 of the thesis.\
-"TimeZones.R" creates the Time Zones structure.\
-"LoadShifting.R" simulates load shifting scenarios on the TimeZones structure.\
-"L1-L2.R" converts LoadShifting or TimeZones structures back into the L1 and L2 type structures.
+* ```Chapter 2 Plots.R```: παρουσιάζει το σύνολο δεδομένων με μια πρώτη ματιά.
+* ```Chapter 4 Plots.R```: εξετάζει εκτενέστερα το σύνολο δεδομένων.
+* ```Chapter 5 Plots.R```: διερευνά την καινούρια δομή TimeZones.
+* ```Chapter 6 Plots.R```: μελετά τα αποτελέσματα του load shifting.
+* ```TimeZones.R```: δημιουργεί τη νέα δομή χρονικών ζωνών.
+* ```LoadShifting.R```: εφαρμόζει load shifting στη δομή TimeZones.
+* ```L1-L2.R```: επιστρέφει μια δομή LoadShifting ή TimeZones πίσω στις δομές τύπου PEV_L1 και PEV_L2.
