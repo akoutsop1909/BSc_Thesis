@@ -1,22 +1,22 @@
-# Ανάλυση δεδομένων μεγάλου όγκου (big data analytics) για ηλεκτρικά οχήματα σε ευφυή δίκτυα ενέργειας
-Το συγκεκριμένο repository περιλαμβάνει όλα τα απαραίτητα αρχεία csv και script της παρούσας πτυχιακής εργασίας, άμεσα εκτελέσιμα σε περιβάλλον R. Για την ομαλή λειτουργία μερικών script, συνιστάται ο ορισμός της περιοχής (region) του συστήματος του υπολογιστή σε Ηνωμένες Πολιτείες Αμερικής, ώστε η R να εκχωρεί τις ημερομηνίες στα Αγγλικά (όχι στα Ελληνικά), αλλίως κάποια γραφήματα εμφανίζονται λανθασμένα. Εναλλακτικά, ο σύνδεσμος στο "about" του repository οδηγεί σε ένα google colab notebook (με συνδέσμους προς τα υπόλοιπα), όπου ο κώδικας έχει ήδη εκτελεστεί με όλα τα γραφήματα που προκύπτουν, καθώς και συνοδευτική περιγραφή στην αρχή κάθε notebook. 
+# Big data analytics for electric vehicles in the smart grid
+This repository contains the CSV files and R scripts of the BSc thesis, ready to execute in R environment. To produce the graphs correctly, it is recommended to change the computer's region to the United States of America so R assigns the dates in English (not Greek). Alternatively, the link in the "about" section opens a google colab notebook (with links to other notebooks) to view the executed code and graphs, as well as a brief description.
 
-Συνοπτικά, το θέμα της εργασίας αφορούσε τη διερεύνηση των απαιτήσεων ενέργειας ηλεκτρικών οχημάτων (PEV) που φορτίζουν σε ένα "έξυπνο" δίκτυο ενέργειας (smart grid) από δεδομένα που προήλθαν από προσομοίωση σε μορφή csv. Στη συνέχεια εφαρμόστηκε η στρατηγική μετατόπησης φορτίων (load shifting), ώστε οι απαιτήσεις ενέργειας του smart grid να μεταφερθούν από τις ώρες αιχμής σε ώρες μη-αιχμής στη διάκρεια της ημέρας. Για τις ανάγκες της εργασίας χρησιμοποιήθηκαν εργαλεία αναλυτικής των δεδομένων (data analytics) και περιγραφικής στατιστικής (descriptive statistics) για τη διαχείριση των δεδομένων και την οπτικοποίηση των αποτελεσμάτων.
+In summary, the BSc thesis investigated the energy demand of electric vehicles charging in the smart grid from simulation data in CSV format. Next, the load shifting strategy migrated the energy demand from peak to off-peak hours with varying success rates (10% - 50%). These rates refer to a theoretical campaign which encourages consumers to charge their vehicles during off-peak hours. To manipulate data and visualize the results, data analytics tools and descriptive statistics were used.
 
-Συμπεριλαμβάνεται το αρχείο pdf την πτυχιακής ```Big data analytics for electric vehicles in the smart grid.pdf```, το οποίο "ανοίγει" στο GitHub με ένα κλικ. Σε περίπτωση σφάλματος χρειάζεται ανανέωση της σελίδας (page refresh).
+The PDF file of the BSc thesis ```Big data analytics for electric vehicles in the smart grid.pdf``` is also available.
 
-## Τα δεδομένα
-* ```House.csv```: περιέχει τις απαιτήσεις ισχύος των οικιών (σε watt).
-* ```PEV_L1.csv```: περιέχει τις απαιτήσεις ισχύος των PEV που φορτίζουν με τον τύπο φόρτησης L1 (σε watt).
-* ```PEV_L2.csv```: περιέχει τις απαιτήσεις ισχύος των PEV που φορτίζουν με τον τύπο φόρτησης L2 (σε watt).
-* ```TimeZones_old.csv```: καινούρια δομή με τις φορτήσεις PEV κατηγοριοποιημένες ανά χρονική ζώνη (time zone).
-* ```TimeZones.csv```: περιέχει μόνο τις φορτήσεις ανα χρονική ζώνη μιας εργάσιμης εβδομάδας του Ιανουαρίου. 
+## The data
+* ```House.csv```: the energy demand of the houses (in Watt).
+* ```PEV_L1.csv```: the energy demand of electric vehicles charging with the L1 charging type (in Watt).
+* ```PEV_L2.csv```: the energy demand of electric vehicles charging with the L2 charging type (in Watt).
+* ```TimeZones_old.csv```: new structure that categorizes the energy demand by time zone.
+* ```TimeZones.csv```: includes only the charges per time zone for a working week of January. 
 
-## Τα script
-* ```Chapter 2 Plots.R```: παρουσιάζει το σύνολο δεδομένων με μια πρώτη ματιά.
-* ```Chapter 4 Plots.R```: εξετάζει εκτενέστερα το σύνολο δεδομένων.
-* ```Chapter 5 Plots.R```: διερευνά την καινούρια δομή TimeZones.
-* ```Chapter 6 Plots.R```: μελετά τα αποτελέσματα του load shifting.
-* ```TimeZones.R```: δημιουργεί τη νέα δομή χρονικών ζωνών.
-* ```LoadShifting.R```: εφαρμόζει load shifting στη δομή TimeZones.
-* ```L1-L2.R```: επιστρέφει μια δομή LoadShifting ή TimeZones πίσω στις δομές τύπου PEV_L1 και PEV_L2.
+## The scripts
+* ```Chapter 2 Plots.R```: a first look at the dataset.
+* ```Chapter 4 Plots.R```: thorough investigation of the dataset.
+* ```Chapter 5 Plots.R```: TimeZones structure exploraton.
+* ```Chapter 6 Plots.R```: load shifting results study.
+* ```TimeZones.R```: creates the new TimeZones structure.
+* ```LoadShifting.R```: applies the load shifting strategy to the TimeZones structure.
+* ```L1-L2.R```: returns a LoadShifting or TimeZones structure back to the PEV_L1 and PEV_L2 structures.
