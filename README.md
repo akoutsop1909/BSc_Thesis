@@ -7,8 +7,8 @@ The PDF file of the BSc thesis ```Big data analytics for electric vehicles in th
 
 ## The data
 * ```House.csv```: the energy demand of the houses (in Watt).
-* ```PEV_L1.csv```: the energy demand of electric vehicles charging with the L1 charging type (in Watt).
-* ```PEV_L2.csv```: the energy demand of electric vehicles charging with the L2 charging type (in Watt).
+* ```PEV_L1.csv```: the energy demand of vehicles charging with the L1 charging type (in Watt).
+* ```PEV_L2.csv```: the energy demand of vehicles charging with the L2 charging type (in Watt).
 * ```TimeZones_old.csv```: new structure that categorizes the energy demand by time zone.
 * ```TimeZones.csv```: includes only the charges per time zone for a working week of January. 
 
