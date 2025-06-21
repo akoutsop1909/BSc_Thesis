@@ -23,4 +23,4 @@ The PDF file of the BSc thesis ```Big data analytics for electric vehicles in th
 * ```LoadShifting.R```: applies the load shifting strategy to the TimeZones structure.
 * ```L1-L2.R```: returns a LoadShifting or TimeZones structure back to the PEV_L1 and PEV_L2 structures.
 
-![Placeholder](https://via.placeholder.com/150)
+<!-- ![Placeholder](https://via.placeholder.com/150) -->
