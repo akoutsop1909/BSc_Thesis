@@ -27,6 +27,9 @@ The **Time Zones structure** was derived by processing the PEV charging profiles
 All datasets are complete with no missing values for any time interval.
 
 ### Sample Tables
+<details>
+<summary><b>View Sample Tables (Household, PEV_L1, etc.)</b></summary>
+  
 1. **Household Electricity Demand Profiles (Household.csv)**
 
 | Time             | Household 1 | Household 2 | Household 3 | ... | Household 200 |
@@ -75,6 +78,8 @@ All datasets are complete with no missing values for any time interval.
 | ...         | ...        | ...      | ...       | ...             | ...        | ...       | ...        | ...  | ...         |
 | L2          | 31/12/2010 | Weekday  | H200.V348 | 6               | 18:50      | 19:40     | Peak       | 6,6  | FALSE       |
 
+</details>
+
 ### Data Clarifications
 * **PEV column names:** Each label corresponds to a unique household-vehicle combination. For example, `H001.V001` refers to **Vehicle 1 (V001)** in **Household 1 (H001)**. This naming pattern applies to all 348 vehicles.
 * **PEV charging:** A value of **zero** means the vehicle is **not charging** at that time, while any **non-zero** value (1920 for Level 1 or 6600 for Level 2) indicates the charging power in watts.
@@ -92,21 +97,11 @@ Clone this repository to your local machine following the [instructions from Git
 ### Running the Scripts
 Each script begins with instructions, package loading, and sets the working directory to the **/data** folder. The scripts are pre-configured to load data from subfolders, but you can modify the paths if needed. Some process and save data as `.csv` files to the specified directory, while others generate visualizations that you can view directly in your R IDE's plot window or save to your preferred location. 
 
-<p align="center">
-  <b>⚠️The rest of the readme is under construction⚠️</b>
-</p>
-
-### 1. **First plot and Exploratory Data Analysis (EDA)**
-
-### 2. **The Time Zones Structure**
-
-### 3. **Load Shifting**
-
 ## ⌨️ Demo Run
 <p align="center">
 <img width="1060" height="573" alt="Rplot" src="https://github.com/user-attachments/assets/99b6a12f-47a4-4941-b599-cc0de970e71b" />
 </p>
 
+<!--
 ## 📂 Folder Structure
-
-<!-- ![Placeholder](https://via.placeholder.com/150) -->
+-->
